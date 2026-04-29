@@ -7,121 +7,62 @@
 
 body {
   background: black;
+  overflow: hidden;
   color: white;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(0,0,0,0.7);
+/* CURSOR */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00f7ff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* STARS */
+#stars {
   position: fixed;
   width: 100%;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav a {
-  color: #aaa;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #00f7ff;
-}
-
-.logo {
-  color: #00f7ff;
+  height: 100%;
+  background: transparent;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') no-repeat center/cover;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
+  align-items: center;
 }
 
 .content {
-  position: relative;
   text-align: center;
-}
-
-.tag {
-  color: #00f7ff;
-  letter-spacing: 2px;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h1 span {
-  color: #00f7ff;
 }
 
 /* BUTTON */
 .btn {
   margin-top: 20px;
   display: inline-block;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border: 1px solid #00f7ff;
   color: #00f7ff;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #00f7ff;
-  color: black;
-  box-shadow: 0 0 20px #00f7ff;
-}
-
-/* SECTION */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* PROJECT */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #111;
-  margin: 15px;
-  padding: 15px;
-  width: 260px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card img {
+/* SCAN EFFECT */
+body::after {
+  content: "";
+  position: fixed;
   width: 100%;
-  border-radius: 10px;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #00f7ff;
+  height: 100%;
+  background: repeating-linear-gradient(
+    rgba(0,255,255,0.05) 0px,
+    rgba(0,255,255,0.05) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
 }
