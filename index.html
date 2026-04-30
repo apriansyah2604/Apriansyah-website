@@ -3,32 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gobel Sci-Fi Extreme</title>
+  <title>Gobel Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- CURSOR -->
-<div class="cursor"></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GOBEL</div>
 
-<!-- PARTICLE -->
-<div id="stars"></div>
+  <div class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<nav>
-  <h2 class="logo">GOBEL</h2>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
 
-<section class="hero">
-  <div class="content">
-    <h1>FUTURE INTERFACE</h1>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Designing The <span>Future</span></h1>
     <p>Roblox Developer • Sci-Fi Experience</p>
-    <a href="#" class="btn">ENTER SYSTEM</a>
+    <a href="#project" class="btn">Explore Project</a>
   </div>
 </section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>Saya developer Roblox yang membuat game modern, ringan, dan siap viral.</p>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="section">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://picsum.photos/400/250?1">
+      <h3>Game Petani</h3>
+      <p>Simulasi farming modern</p>
+      <a href="#" class="btn small">Mainkan</a>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/400/250?2">
+      <h3>Game Balap</h3>
+      <p>Racing system upgrade</p>
+      <a href="#" class="btn small">Mainkan</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Instagram: @usernamekamu</p>
+</section>
+
+<footer>
+  <p>© 2026 Gobel</p>
+</footer>
 
 <script src="script.js"></script>
 
