@@ -14,8 +14,8 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.7);
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.6);
   position: sticky;
   top: 0;
 }
@@ -27,8 +27,8 @@ body {
 
 .menu a {
   margin-left: 20px;
-  text-decoration: none;
   color: #aaa;
+  text-decoration: none;
 }
 
 .menu a:hover {
@@ -42,12 +42,28 @@ body {
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: radial-gradient(circle at center, #0a1a2f, #000);
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  padding: 80px 40px;
+  min-height: 100vh;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  flex: 1;
+}
+
+.hero-right img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tag {
+  color: #00f7ff;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -59,9 +75,14 @@ body {
   color: #00f7ff;
 }
 
-/* BUTTON */
-.btn {
+.desc {
   margin-top: 15px;
+  color: #aaa;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
   padding: 10px 20px;
   border: 1px solid #00f7ff;
   color: #00f7ff;
@@ -73,16 +94,30 @@ body {
   color: black;
 }
 
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 30px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 /* SECTION */
 .section {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 60px 40px;
+}
+
+.title {
+  margin-bottom: 30px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -97,17 +132,33 @@ body {
   border-radius: 8px;
 }
 
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
   .menu {
     display: none;
     flex-direction: column;
-    background: black;
     position: absolute;
-    top: 60px;
     right: 0;
-    width: 200px;
+    background: black;
+    top: 60px;
   }
 
   .menu.active {
@@ -116,10 +167,6 @@ body {
 
   .hamburger {
     display: block;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 
   .hero h1 {
